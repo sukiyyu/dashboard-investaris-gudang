@@ -1,0 +1,492 @@
+
+/* =================================
+   1. GLOBAL STYLE
+================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #fdf2f8, #ecfeff);
+  color: #263449;
+  min-height: 100vh;
+}
+
+.app-layout {
+  min-height: 100vh;
+}
+
+/* =================================
+   2. SIDEBAR
+================================= */
+.sidebar {
+  position: fixed;
+  width: 255px;
+  height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(
+    160deg,
+    #312e81,
+    #4f46e5,
+    #7c3aed,
+    #9333ea
+  );
+  box-shadow: 5px 0 25px rgba(79, 70, 229, 0.18);
+  z-index: 10;
+}
+
+.sidebar h3 {
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}
+
+.sidebar h3 i {
+  margin-right: 8px;
+  color: #facc15;
+}
+
+.sidebar hr {
+  border-color: rgba(255,255,255,0.3);
+  margin-bottom: 25px;
+}
+
+.sidebar a {
+  display: block;
+  color: #e0e7ff;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  color: #ffffff;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+  transform: translateX(5px);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+}
+
+.sidebar-user {
+  margin-top: auto;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 20px;
+  color: white;
+}
+
+.sidebar-user strong,
+.sidebar-user small {
+  display: block;
+}
+
+.sidebar-user strong {
+  font-size: 13px;
+}
+
+.sidebar-user small {
+  color: #ddd6fe;
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+/* =================================
+   3. MAIN CONTENT
+================================= */
+.main-content {
+  margin-left: 255px;
+  padding: 35px;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.top-header h3 {
+  font-size: 25px;
+  font-weight: 800;
+  color: #312e81;
+}
+
+.top-header p {
+  color: #8791a5;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.profile {
+  background: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  color: #6d28d9;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(79,70,229,0.08);
+}
+
+.profile i {
+  font-size: 20px;
+  margin-right: 7px;
+}
+
+/* =================================
+   4. WELCOME PANEL
+================================= */
+.welcome-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 35px;
+  border-radius: 22px;
+  color: white;
+  background: linear-gradient(
+    120deg,
+    #4338ca,
+    #7c3aed,
+    #db2777
+  );
+  box-shadow: 0 12px 30px rgba(124,58,237,0.22);
+}
+
+.welcome-panel::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  right: -50px;
+  top: -90px;
+  background: rgba(255,255,255,0.12);
+}
+
+.welcome-panel h3 {
+  font-size: 25px;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-panel p {
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: #f3e8ff;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+/* =================================
+   5. STATISTIC CARDS
+================================= */
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+  padding: 23px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(31,41,55,0.07);
+  transition: 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.8);
+}
+
+.stat-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px rgba(79,70,229,0.15);
+}
+
+.stat-card::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  right: -30px;
+  bottom: -45px;
+  background: rgba(124,58,237,0.06);
+}
+
+.stat-card p {
+  color: #8992a6;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.stat-card h3 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #263449;
+}
+
+.stat-icon {
+  font-size: 25px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.stat-icon.blue {
+  color: #2563eb;
+  background: linear-gradient(135deg,#dbeafe,#bfdbfe);
+}
+
+.stat-icon.green {
+  color: #059669;
+  background: linear-gradient(135deg,#d1fae5,#a7f3d0);
+}
+
+.stat-icon.orange {
+  color: #d97706;
+  background: linear-gradient(135deg,#fef3c7,#fde68a);
+}
+
+.stat-icon.red {
+  color: #e11d48;
+  background: linear-gradient(135deg,#ffe4e6,#fecdd3);
+}
+
+/* =================================
+   6. INVENTORY TABLE
+================================= */
+.inventory-card {
+  background: rgba(255,255,255,0.95);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(31,41,55,0.07);
+  border: 1px solid #ffffff;
+}
+
+.inventory-card h4 {
+  color: #312e81;
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.inventory-card small {
+  color: #929bad;
+}
+
+.inventory-card table {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.inventory-card thead th {
+  background: linear-gradient(90deg,#4338ca,#7c3aed);
+  color: white;
+  padding: 16px 13px;
+  white-space: nowrap;
+  border: none;
+}
+
+.inventory-card thead th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.inventory-card thead th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.inventory-card td {
+  padding: 15px 13px;
+  vertical-align: middle;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.inventory-card tbody tr:hover {
+  background: #f5f3ff;
+}
+
+.inventory-card tbody tr {
+  transition: 0.2s;
+}
+
+/* =================================
+   7. BUTTONS
+================================= */
+.btn-primary {
+  background: linear-gradient(100deg,#4f46e5,#9333ea,#db2777);
+  border: none;
+  border-radius: 10px;
+  padding: 11px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(124,58,237,0.2);
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(100deg,#3730a3,#7e22ce,#be185d);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  border-radius: 8px;
+  color: #6366f1;
+  border-color: #a5b4fc;
+}
+
+.btn-outline-danger {
+  border-radius: 8px;
+}
+
+/* =================================
+   8. SEARCH AND FILTER
+================================= */
+.form-control,
+.form-select {
+  border: 1px solid #e0e7ff;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 13px;
+  background-color: #fafaff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139,92,246,0.12);
+}
+
+/* =================================
+   9. BADGES
+================================= */
+.badge {
+  padding: 8px 11px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+/* =================================
+   10. MODAL
+================================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(30,20,65,0.65);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.modal-box {
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  animation: modalIn 0.3s ease;
+}
+
+.modal-box h4 {
+  color: #4338ca;
+  font-weight: 800;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================
+   11. FOOTER
+================================= */
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: #929bad;
+  font-size: 12px;
+}
+
+/* =================================
+   12. RESPONSIVE
+================================= */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+    padding: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .sidebar-user {
+    display: none;
+  }
+
+  .sidebar a {
+    display: inline-block;
+    margin: 5px 2px;
+    padding: 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .profile {
+    display: none;
+  }
+
+  .top-header h3 {
+    font-size: 19px;
+  }
+
+  .welcome-panel {
+    padding: 25px;
+  }
+
+  .welcome-panel h3 {
+    font-size: 20px;
+  }
+
+  .inventory-card {
+    padding: 17px;
+  }
+}
